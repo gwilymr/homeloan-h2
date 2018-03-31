@@ -14,4 +14,9 @@ java -cp ${H2_HOME}/h2/bin/h2*.jar org.h2.tools.RunScript \
     -showResults \
     -user sa
 
+echo "$@"
+echo ======
+
 exec "$@";
+
+sleep 10000

@@ -4,6 +4,7 @@ ENV H2_HOME /opt/h2
 ENV DATABASE_NAME test
 
 RUN mkdir -p ${H2_HOME}
+RUN chmod 775 ${H2_HOME}
 
 WORKDIR ${H2_HOME}
 

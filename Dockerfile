@@ -17,6 +17,6 @@ RUN unzip h2.zip && \
     chmod +x init/concat_sql_scripts.sh && \
     init/concat_sql_scripts.sh
 
-EXPOSE 8080 1521 8082
+EXPOSE 8080 1521
 
 ENTRYPOINT ["/bin/bash", "run.sh"]

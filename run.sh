@@ -8,11 +8,6 @@ java -cp ${H2_HOME}/h2/bin/h2*.jar org.h2.tools.Server \
     -tcp -tcpAllowOthers -tcpPort 1521 \
     -baseDir ${H2_HOME}/h2-data &
 
-sleep 10
-
-java -cp ${H2_HOME}/h2/bin/h2*.jar org.h2.tools.Console \
-    -web -webAllowOthers -webPort 8082 &
-
 sleep 10 
 
 java -cp ${H2_HOME}/h2/bin/h2*.jar org.h2.tools.RunScript \
@@ -20,6 +15,11 @@ java -cp ${H2_HOME}/h2/bin/h2*.jar org.h2.tools.RunScript \
     -script ${H2_HOME}/init/init.sql \
     -showResults \
     -user sa
+    
+java -cp ${H2_HOME}/h2/bin/h2*.jar org.h2.tools.Console \
+    -web -webAllowOthers -webPort 8082 
+
+
 
 echo "$@"
 echo ======

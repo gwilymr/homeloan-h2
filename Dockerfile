@@ -1,7 +1,7 @@
 FROM java:7
 
 ENV H2_HOME /opt/h2
-ENV DATABASE_NAME test
+ENV DATABASE_NAME homeloan
 
 RUN mkdir -p ${H2_HOME}
 RUN chmod 775 ${H2_HOME}
